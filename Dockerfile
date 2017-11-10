@@ -5,7 +5,7 @@ FROM centos:latest
 LABEL maintainer "kclaxton@cogitocorp.com"
 
 # Install some additional packages
-RUN echo -e "[platform-prod-cogito]\nname=platform-prod-cogito for RHEL/ CentOS\nbaseurl=http://yum.cogitohealth.net/platform-prod-cogito/\nenabled=1\ngpgcheck=0" > /etc/yum.repos.d/platform-prod-cogito
+RUN echo -e "[platform-prod-cogito]\nname=platform-prod-cogito for RHEL/ CentOS\nbaseurl=http://yum.cogitohealth.net/platform-prod-cogito/\nenabled=1\ngpgcheck=0" > /etc/yum.repos.d/platform-prod-cogito.repo
 
 RUN yum -y install yum-utils admintools authserv computeserver
 
