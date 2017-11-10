@@ -9,5 +9,6 @@ RUN echo -e "[platform-prod-cogito]\nname=platform-prod-cogito for RHEL/ CentOS\
 RUN echo -e "[thirdparty]\nname=thirdparty for RHEL/ CentOS\nbaseurl=http://yum.cogitohealth.net/thirdparty/\nenabled=1\ngpgcheck=0" > /etc/yum.repos.d/thirdparty.repo
 
 RUN yum -y install glibc
-RUN yum -y install telephone-audio-server mysql orkaudio
+RUN yum -y install mysql orkaudio
+RUN yum -y install telephone-audio-server
 
