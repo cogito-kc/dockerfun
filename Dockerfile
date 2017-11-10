@@ -11,5 +11,7 @@ RUN echo -e "[thirdparty]\nname=thirdparty for RHEL/ CentOS\nbaseurl=http://yum.
 RUN yum -y install glibc
 RUN yum -y install mysql
 RUN yum -y install telephone-audio-server
+# THis is a stupid hack.  I don't know why the deps don't resolve
+RUN yum -y install glibc-0:2.17-196.el7.i686 libgcc-0:4.8.5-16.el7.x86_64 glibc-0:2.17-196.el7.x86_64 libgcc-0:4.8.5-16.el7.i686
 RUN yum -y install orkaudio
 
